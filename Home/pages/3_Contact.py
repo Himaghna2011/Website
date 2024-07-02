@@ -13,13 +13,7 @@ def load_lottieurl(url):
 
 lottie_files = load_lottieurl("https://lottie.host/9cd5a360-f5c4-4b61-85bd-e6dc0839ccbe/k79krqjg8g.json")
 
-with st.container():
-  left_column, right_column = st.columns(2)
-
-  with left_column:
-    st.title("Contact me!")
-  with right_column:
-    st_lottie(lottie_files, height = 150, key = "coding")
+st.title("Contact me!")
 
 
 css_code = """
@@ -57,10 +51,16 @@ footer {visibility: hidden;}
 header {visibility: hidden;}
 """
 
+
 with st.container():
     st.write("---")
+    left_column, right_column = st.columns(2)
+    
+    with left_column:
     st.header("Get In Touch With Me!")
     st.write("##")
+    with right_column:
+        st_lottie(lottie_files, height = 300, key = "coding")
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
