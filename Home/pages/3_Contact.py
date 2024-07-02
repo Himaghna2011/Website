@@ -5,7 +5,22 @@ from PIL import Image
 
 st.set_page_config(page_title="Contact", page_icon=":tada:", layout = "wide")
 
-st.title("Contact me!")
+def load_lottieurl(url):
+    req = requests.get(url)
+    if req.status_code != 200:
+        return None
+    return req.json()
+
+lottie_files = load_lottieurl("https://lottie.host/9cd5a360-f5c4-4b61-85bd-e6dc0839ccbe/k79krqjg8g.json")
+
+with st.container():
+  left_column, right_column = st.columns(2)
+
+  with left_column:
+    st.title("Contact me!")
+  with right_column:
+    st_lottie(lottie_files, height = 300, key = "coding")
+
 
 css_code = """
 /* CSS Snippet from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp */
@@ -60,13 +75,3 @@ with st.container():
 st.markdown(contact_form, unsafe_allow_html=True)
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
-
-def load_lottieurl(url):
-    req = requests.get(url)
-    if req.status_code != 200:
-        return None
-    return req.json()
-
-lottie_files = load_lottieurl("https://lottie.host/9cd5a360-f5c4-4b61-85bd-e6dc0839ccbe/k79krqjg8g.json")
-
-st_lottie(lottie_files, height = 300, key = "coding")
