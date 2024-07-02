@@ -54,7 +54,7 @@ header {visibility: hidden;}
 st.header("Get in touch with me!")
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
-    contact_form = """
+contact_form = """
     <form action="https://formsubmit.co/himaghnasingh@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
