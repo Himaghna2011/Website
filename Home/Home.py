@@ -5,6 +5,9 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import os
 
+
+st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
+
 # Create the .streamlit directory if it doesn't exist
 os.makedirs(".streamlit", exist_ok=True)
 
@@ -37,8 +40,6 @@ css_content = """
 
 # Embed the CSS style into the Streamlit app
 st.markdown(css_content, unsafe_allow_html=True)
-
-st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
 
 # Create the .streamlit directory if it doesn't exist
 os.makedirs(".streamlit", exist_ok=True)
