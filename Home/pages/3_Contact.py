@@ -47,7 +47,8 @@ with st.container():
     st.header("Get In Touch With Me!")
     st.write("##")
 
- contact_form = """
+ contact_form = 
+      """
     <form action="https://formsubmit.co/himaghnasingh@gmail.com,himaghna313@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
