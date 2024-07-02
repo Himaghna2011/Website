@@ -30,7 +30,7 @@ with st.container():
         st.write("##")
         st.write(
             """
-            So, I am a 13 year old kid who basically just sits and codes on the computer trying to figure out how to build this website, and coming from me, this has taken a lot of hard work to build. So I encourage you to please take a look at it. If you have any questions, you can contact me at the contact page.
+            So, I am a 13 year old kid who basically just sits and codes on the computer trying to figure out how to build this website. So I encourage you to please take a look at it. If you have any questions, you can contact me at the contact page.
             """
         )
 
