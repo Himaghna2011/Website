@@ -60,3 +60,13 @@ with st.container():
 st.markdown(contact_form, unsafe_allow_html=True)
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
+
+def load_lottieurl(url):
+    req = requests.get(url)
+    if req.status_code != 200:
+        return None
+    return req.json()
+
+lottie_files = load_lottieurl("https://lottie.host/9cd5a360-f5c4-4b61-85bd-e6dc0839ccbe/k79krqjg8g.json")
+
+st_lottie(lottie_files, height = 300, key = "coding")
