@@ -3,27 +3,40 @@ import requests
 import streamlit as st 
 from streamlit_lottie import st_lottie
 from PIL import Image
+import os
+
+# Create the .streamlit directory if it doesn't exist
+os.makedirs(".streamlit", exist_ok=True)
+
+# Define the content of the config.toml file
+config_content = """
+[theme]
+primaryColor="#e694ff"
+backgroundColor="#00172b"
+secondaryBackgroundColor="#041067"
+"""
+
+# Write the content to the config.toml file
+with open(".streamlit/config.toml", "w") as config_file:
+    config_file.write(config_content)
 
 st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
 
-css_content = """
-<style>
-    .stApp {
-        background-color: #00172b;
-    }
-    .stTextInput {
-        background-color: #041067;
-        color: #e694ff;
-    }
-    .stButton>button {
-        background-color: #e694ff;
-        color: #00172b;
-    }
-</style>
+# Create the .streamlit directory if it doesn't exist
+os.makedirs(".streamlit", exist_ok=True)
+
+# Define the content of the config.toml file
+config_content = """
+[theme]
+primaryColor="#e694ff"
+backgroundColor="#00172b"
+secondaryBackgroundColor="#041067"
 """
 
-# Embed the CSS style into the Streamlit app
-st.markdown(css_content, unsafe_allow_html=True)
+# Write the content to the config.toml file
+with open(".streamlit/config.toml", "w") as config_file:
+    config_file.write(config_content)
+
 
 def load_lottieurl(url):
     req = requests.get(url)
