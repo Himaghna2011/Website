@@ -34,4 +34,4 @@ with st.container():
         )
 
     with right_column:
-        st_lottie(lottie_files, height = 300, key = "coding")
+        st.empty()
