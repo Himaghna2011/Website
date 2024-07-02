@@ -6,6 +6,25 @@ from PIL import Image
 
 st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
 
+css_content = """
+<style>
+    .stApp {
+        background-color: #00172b;
+    }
+    .stTextInput {
+        background-color: #041067;
+        color: #e694ff;
+    }
+    .stButton>button {
+        background-color: #e694ff;
+        color: #00172b;
+    }
+</style>
+"""
+
+# Embed the CSS style into the Streamlit app
+st.markdown(css_content, unsafe_allow_html=True)
+
 def load_lottieurl(url):
     req = requests.get(url)
     if req.status_code != 200:
