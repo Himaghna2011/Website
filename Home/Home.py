@@ -13,7 +13,6 @@ def load_lottieurl(url):
     return req.json()
 
 lottie_files = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
-img_contact = Image.open("photo.jpg")
 
 with st.container():
     st.subheader("Hi, :wave:")
