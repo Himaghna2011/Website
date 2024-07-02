@@ -57,8 +57,8 @@ with st.container():
     left_column, right_column = st.columns(2)
     
     with left_column:
-    st.header("Get In Touch With Me!")
-    st.write("##")
+        st.header("Get In Touch With Me!")
+        st.write("##")
     with right_column:
         st_lottie(lottie_files, height = 300, key = "coding")
 
