@@ -5,24 +5,10 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import os
 
+# Step 1: Ensure the .streamlit/config.toml file is in place
+# This part is not needed if you have already created the config.toml manually
 
-st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
-
-# Create the .streamlit directory if it doesn't exist
-os.makedirs(".streamlit", exist_ok=True)
-
-# Define the content of the config.toml file
-config_content = """
-[theme]
-primaryColor="#e694ff"
-backgroundColor="#00172b"
-secondaryBackgroundColor="#041067"
-"""
-
-# Write the content to the config.toml file
-with open(".streamlit/config.toml", "w") as config_file:
-    config_file.write(config_content)
-
+# Step 2: Use custom CSS to further style your app
 css_content = """
 <style>
     .css-18e3th9 {
@@ -41,21 +27,13 @@ css_content = """
 # Embed the CSS style into the Streamlit app
 st.markdown(css_content, unsafe_allow_html=True)
 
-# Create the .streamlit directory if it doesn't exist
-os.makedirs(".streamlit", exist_ok=True)
+# Your Streamlit app code here
+st.title("Welcome to My Streamlit App")
+st.write("This app uses a custom theme with the specified colors and additional CSS styling!")
 
-# Define the content of the config.toml file
-config_content = """
-[theme]
-primaryColor="#e694ff"
-backgroundColor="#00172b"
-secondaryBackgroundColor="#041067"
-"""
-
-# Write the content to the config.toml file
-with open(".streamlit/config.toml", "w") as config_file:
-    config_file.write(config_content)
-
+# Example widgets
+st.button("Click me!")
+st.text_input("Enter some text:")
 
 def load_lottieurl(url):
     req = requests.get(url)
