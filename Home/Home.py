@@ -20,6 +20,24 @@ secondaryBackgroundColor="#041067"
 with open(".streamlit/config.toml", "w") as config_file:
     config_file.write(config_content)
 
+css_content = """
+<style>
+    .css-18e3th9 {
+        background-color: #00172b !important;
+    }
+    .css-1cpxqw2 {
+        background-color: #041067 !important;
+    }
+    .stButton>button {
+        background-color: #e694ff !important;
+        color: #00172b !important;
+    }
+</style>
+"""
+
+# Embed the CSS style into the Streamlit app
+st.markdown(css_content, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
 
 # Create the .streamlit directory if it doesn't exist
