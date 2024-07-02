@@ -51,8 +51,6 @@ footer {visibility: hidden;}
 header {visibility: hidden;}
 """
 
-st.header("Get in touch with me!")
-
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
 contact_form = """
     <form action="https://formsubmit.co/himaghnasingh@gmail.com" method="POST">
