@@ -44,10 +44,6 @@ header {visibility: hidden;}
 
 with st.container():
     st.write("---")
-    st.write("##")
- 
-with st.container():
-    st.write("---")
     st.header("Get In Touch With Me!")
     st.write("##")
 
