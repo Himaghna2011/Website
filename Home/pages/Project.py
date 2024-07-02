@@ -3,7 +3,7 @@ from PIL import Image
 import requests
 from streamlit_lottie import st_lottie
 
-st.set_page_config(page_title="Project", page_icon=":tada:")
+st.set_page_config(page_title="Project", page_icon=":tada:", layout="wide")
 
 st.title("Projects")
 
