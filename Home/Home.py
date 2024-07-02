@@ -18,7 +18,7 @@ lottie_files = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcf
 with st.container():
     st.subheader("Hi, :wave:")
     st.title("I am trying to learn how to code.")
-    st.write("This is my first website that I made!")
+    st.write("This is my **first website** that I made!")
 
 with st.container():
     st.write("---")
