@@ -1,7 +1,7 @@
 
 import requests
 import streamlit as st 
-import streamlit_lottie as st_lottie
+from streamlit_lottie import st_lottie
 from PIL import Image
 
 st.set_page_config(page_title="Homepage", page_icon=":tada:", layout = "wide")
@@ -13,6 +13,7 @@ def load_lottieurl(url):
     return req.json()
 
 lottie_files = load_lottieurl("https://assets5.lottiefiles.com/packages/lf20_fcfjwiyb.json")
+img_contact = Image.open("photo.jpg")
 
 with st.container():
     st.subheader("Hi, :wave:")
@@ -34,4 +35,4 @@ with st.container():
         )
 
     with right_column:
-        st.empty()
+        st_lottie(lottie_files, height = 300, key = "coding")
