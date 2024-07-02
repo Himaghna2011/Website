@@ -46,8 +46,14 @@ with st.container():
     st.write("---")
     st.write("##")
  
+with st.container():
+    st.write("---")
+    st.header("Get In Touch With Me!")
+    st.write("##")
+
+    # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
-    <form action="https://formsubmit.co/himaghnasingh@gmail.COM" method="POST">
+    <form action="https://formsubmit.co/himaghnasingh@gmail.com" method="POST">
         <input type="hidden" name="_captcha" value="false">
         <input type="text" name="name" placeholder="Your name" required>
         <input type="email" name="email" placeholder="Your email" required>
@@ -55,11 +61,6 @@ with st.container():
         <button type="submit">Send</button>
     </form>
     """
-    left_column, right_column = st.columns(2)
-    with left_column:
         st.markdown(contact_form, unsafe_allow_html=True)
-    with right_column:
-        st.empty()
-
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
