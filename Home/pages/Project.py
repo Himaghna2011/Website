@@ -24,7 +24,3 @@ def load_lottiesurl(url):
     if requ.status_code != 200:
         return None
     return requ.json()
-
-lotties_files = load_lottiesurl("https://lottie.host/82be80b1-8f25-414e-8e8b-ec8639917416/H4sRDOIEgR.json")
-
-st_lottie(lotties_files, height = 300, key = "coding")
