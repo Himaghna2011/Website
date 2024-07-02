@@ -5,6 +5,8 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import os
 
+st.set_page_config(page_title="Homepage", page_icon=":tada:", base = "dark")
+
 # Step 1: Ensure the .streamlit/config.toml file is in place
 # This part is not needed if you have already created the config.toml manually
 
