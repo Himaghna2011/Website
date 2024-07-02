@@ -19,7 +19,7 @@ with st.container():
   with left_column:
     st.title("Contact me!")
   with right_column:
-    st_lottie(lottie_files, height = 300, key = "coding")
+    st_lottie(lottie_files, height = 150, key = "coding")
 
 
 css_code = """
