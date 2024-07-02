@@ -27,14 +27,6 @@ css_content = """
 # Embed the CSS style into the Streamlit app
 st.markdown(css_content, unsafe_allow_html=True)
 
-# Your Streamlit app code here
-st.title("Welcome to My Streamlit App")
-st.write("This app uses a custom theme with the specified colors and additional CSS styling!")
-
-# Example widgets
-st.button("Click me!")
-st.text_input("Enter some text:")
-
 def load_lottieurl(url):
     req = requests.get(url)
     if req.status_code != 200:
