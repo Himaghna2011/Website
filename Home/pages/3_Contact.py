@@ -51,16 +51,7 @@ footer {visibility: hidden;}
 header {visibility: hidden;}
 """
 
-
-with st.container():
-    st.write("---")
-    left_column, right_column = st.columns(2)
-    
-    with left_column:
-        st.header("Get In Touch With Me!")
-        st.write("##")
-    with right_column:
-        st_lottie(lottie_files, height = 300, key = "coding")
+st.header("Get in touch with me!")
 
     # Documention: https://formsubmit.co/ !!! CHANGE EMAIL ADDRESS !!!
     contact_form = """
@@ -72,6 +63,15 @@ with st.container():
         <button type="submit">Send</button>
     </form>
     """
-st.markdown(contact_form, unsafe_allow_html=True)
+
+with st.container():
+    st.write("---")
+    left_column, right_column = st.columns(2)
+    
+    with left_column:
+        st.markdown(contact_form, unsafe_allow_html=True)
+        st.write("##")
+    with right_column:
+        st_lottie(lottie_files, height = 300, key = "coding")
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
