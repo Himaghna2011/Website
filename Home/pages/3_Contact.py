@@ -72,6 +72,6 @@ with st.container():
         st.markdown(contact_form, unsafe_allow_html=True)
         st.write("##")
     with right_column:
-        st_lottie(lottie_files, height = 300, key = "coding")
+        st_lottie(lottie_files, height = 350, key = "coding")
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
