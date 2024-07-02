@@ -61,6 +61,6 @@ with st.container():
         <button type="submit">Send</button>
     </form>
     """
-        st.markdown(contact_form, unsafe_allow_html=True)
+st.markdown(contact_form, unsafe_allow_html=True)
 
 st.markdown(f'<style>{css_code}</style>', unsafe_allow_html=True)
