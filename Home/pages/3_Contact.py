@@ -3,7 +3,7 @@ import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
-st.set_page_config(page_title="Contact", page_icon=":tada:")
+st.set_page_config(page_title="Contact", page_icon=":tada:", layout = "wide")
 
 st.title("Contact me!")
 
