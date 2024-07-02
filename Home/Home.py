@@ -7,28 +7,6 @@ import os
 
 st.set_page_config(page_title="Homepage", page_icon=":tada:", base = "dark")
 
-# Step 1: Ensure the .streamlit/config.toml file is in place
-# This part is not needed if you have already created the config.toml manually
-
-# Step 2: Use custom CSS to further style your app
-css_content = """
-<style>
-    .css-18e3th9 {
-        background-color: #00172b !important;
-    }
-    .css-1cpxqw2 {
-        background-color: #041067 !important;
-    }
-    .stButton>button {
-        background-color: #e694ff !important;
-        color: #00172b !important;
-    }
-</style>
-"""
-
-# Embed the CSS style into the Streamlit app
-st.markdown(css_content, unsafe_allow_html=True)
-
 def load_lottieurl(url):
     req = requests.get(url)
     if req.status_code != 200:
